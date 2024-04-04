@@ -73,10 +73,11 @@ button.active {
 header, nav {
   background-color: #000;
   color: #fff;
-  padding: 20px 0;
-  position: sticky;
+  position: fixed;
   top: 0;
+  width: 100%;
   z-index: 1000;
+  padding: 20px 0;
 }
 
 nav ul {
@@ -100,6 +101,30 @@ nav ul li a {
 nav ul li a:hover, nav ul li a:focus {
   background-color: #6c8694;
   border-radius: 5px;
+}
+
+/* Hamburger menu icon styles */
+.hamburger-icon {
+  display: none; /* Hidden by default */
+  position: absolute;
+  right: 10px; /* Positioned to the top right corner */
+  top: 10px;
+  cursor: pointer;
+}
+
+/* Responsive adjustments for mobile */
+@media screen and (max-width: 768px) {
+  nav {
+    padding: 10px 0; /* Reduced padding for a thinner navigation bar */
+  }
+
+  .hamburger-icon {
+    display: block; /* Show the hamburger icon on mobile */
+  }
+
+  nav ul {
+    display: none; /* Hide the full navigation menu on mobile */
+  }
 }
 
 /* Responsive adjustments */
