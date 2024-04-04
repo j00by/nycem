@@ -1,38 +1,19 @@
 body {
-  /* Updated body styles */
-  background-color: #e7ecef; /* Neutral background color */
+  background-color: #e7ecef;
   font-family: Arial, sans-serif;
   margin: 0;
-  padding-top: 0px; /* Updated to remove padding */
+  padding-top: 0px;
 }
 
-/* Full-size header image styles */
 #fullSizeHeader img {
-  width: 100vw; /* Full width of the viewport */
-  height: auto; /* Updated to auto to adjust height dynamically */
-  object-fit: cover; /* Cover the entire area without stretching */
+  width: 100vw;
+  height: auto;
+  object-fit: cover;
 }
-
-/* Style for larger screens */
-#fullSizeHeader img {
-  width: 100%;
-  height: auto; /* Updated to auto to adjust height dynamically */
-}
-
-/* Media query for screens smaller than 500px */
-@media screen and (max-width: 500px) {
-  #fullSizeHeader img {
-    /* Adjust the size of the image for smaller screens */
-    width: 50%;
-    height: auto;
-  }
-}
-
-/* Main content CSS */
 
 main {
-  padding: 20px; /* Adds padding inside the main element */
-  margin: 20px; /* Adds margin outside the main element */
+  padding: 20px;
+  margin: 20px;
 }
 
 #pageTitle {
@@ -41,19 +22,11 @@ main {
   margin: 20px 0;
 }
 
-#content {
-  margin: 20px;
+#content, #definitionBox {
+  background-color: #000;
+  color: #fff;
   padding: 20px;
   text-align: center;
-}
-
-#definitionBox {
-  background-color: #f9f9f9;
-  border-radius: 8px;
-  padding: 20px;
-  margin-top: 20px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  text-align: left;
 }
 
 button {
@@ -61,7 +34,6 @@ button {
   background-image: linear-gradient(#2a6587 0, #82aabf 100%);
   border-radius: 20px;
   border-style: none;
-  box-shadow: rgba(245, 244, 247, .25) 0 1px 1px inset;
   color: #fff;
   cursor: pointer;
   display: inline-block;
@@ -70,13 +42,11 @@ button {
   font-weight: 500;
   height: 60px;
   line-height: 60px;
-  margin-left: -4px;
+  margin: 10px 5px; /* Adjusted for spacing */
   outline: 0;
   text-align: center;
-  transition: all .3s cubic-bezier(.05, .03, .35, 1);
+  transition: all .3s;
   user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
   vertical-align: bottom;
   width: 190px;
 }
@@ -89,34 +59,13 @@ button.active {
   background-image: linear-gradient(#2b3438 0, #475b64 100%);
 }
 
-@media screen and (max-width: 1000px) {
-  button {
-    font-size: 14px;
-    height: 55px;
-    line-height: 55px;
-    width: 150px;
-  }
-}
-
-/* Scrollymaps additions */
-header {
-  background-color: #333;
+header, nav {
+  background-color: #000;
   color: #fff;
   padding: 20px 0;
   position: sticky;
   top: 0;
   z-index: 1000;
-}
-
-/* Static navigation bar styles */
-nav {
-  background-color: #000; /* Dark background for the navigation bar */
-  color: #fff;
-  position: fixed; /* Fixed position to keep it static */
-  top: 0; /* Align to the top */
-  width: 100%; /* Full width */
-  z-index: 1000; /* Above other content */
-  padding: 20px 0; /* Increased padding to make the bar thicker */
 }
 
 nav ul {
@@ -140,4 +89,25 @@ nav ul li a {
 nav ul li a:hover, nav ul li a:focus {
   background-color: #6c8694;
   border-radius: 5px;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+  nav ul, nav ul li {
+    display: block;
+    text-align: center;
+  }
+
+  nav ul li a {
+    display: block; /* Make links fill the container */
+    margin: 5px 0; /* Add some margin for tap targets */
+  }
+
+  button {
+    font-size: 14px;
+    height: 50px;
+    line-height: 50px;
+    width: auto; /* Make buttons width auto for better fit */
+    padding: 10px;
+  }
 }
