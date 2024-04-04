@@ -1,5 +1,7 @@
 body {
-  background-image: url('https://judyhuynh.ca/climaterisk/background.png');
+  /* Remove the background-image line and add a neutral blue background color */
+  background-color: #e7ecef; /* This is a soft, neutral blue. Adjust the color as needed. */
+  font-family: Arial, sans-serif;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -69,9 +71,47 @@ button.active {
 
 @media screen and (max-width: 1000px) {
   button {
-      font-size: 14px;
-      height: 55px;
-      line-height: 55px;
-      width: 150px;
+    font-size: 14px;
+    height: 55px;
+    line-height: 55px;
+    width: 150px;
   }
+}
+
+/* Scrollymaps additions */
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  text-align: center;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 10px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 5px 10px;
+}
+
+nav ul li a:hover, nav ul li a:focus {
+  background-color: #575757;
+  border-radius: 5px;
+}
+
+.scroll-section {
+  padding: 50px 20px;
+  margin: 40px 0;
+  border-bottom: 1px solid #ccc;
 }
