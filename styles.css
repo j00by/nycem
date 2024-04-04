@@ -105,41 +105,38 @@ nav ul li a:hover, nav ul li a:focus {
 
 /* Hamburger menu icon styles */
 .hamburger-icon {
-  display: none; /* Hidden by default */
-  font-size: 30px; /* Increased size for visibility */
+  display: none;
+  font-size: 30px;
   position: absolute;
-  right: 15px; /* Positioned to the top right corner */
+  right: 15px;
   top: 15px;
   cursor: pointer;
-  z-index: 1001; /* Ensure it's above the nav bar */
+  z-index: 1001;
 }
 
 /* Responsive adjustments for mobile */
 @media screen and (max-width: 768px) {
-  nav {
-    padding: 5px 0; /* Reduced padding for a thinner navigation bar */
+  body, #definitionBox p, nav ul li a {
+    font-size: 14px; /* Smaller font size for body text and navigation links */
+  }
+
+  button {
+    font-size: 14px; /* Smaller font size for button text */
+    padding: 10px 15px; /* Adjusted padding for a better fit */
+    height: auto; /* Auto height for better text fit */
+    line-height: normal; /* Normal line height for button text */
   }
 
   .hamburger-icon {
-    display: block; /* Show the hamburger icon on mobile */
+    display: block;
   }
 
   nav ul {
-    display: none; /* Hide the full navigation menu on mobile */
+    display: none;
     position: absolute;
-    top: 50px; /* Adjusted to position below the hamburger icon */
+    top: 50px;
     width: 100%;
     background-color: #000;
     padding: 0;
-  }
-
-  /* Ensure the header image is not cut off by hiding the nav bar */
-  header, nav {
-    background-color: transparent;
-    padding: 0;
-  }
-
-  #fullSizeHeader img {
-    margin-top: -20px; /* Adjust if necessary to align the top of the header image */
   }
 }
