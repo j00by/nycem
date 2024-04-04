@@ -1,41 +1,37 @@
-
 body {
-
-    background-image: url('https://judyhuynh.ca/climaterisk/background.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed; 
-    font-family: Arial, sans-serif;
+  background-image: url('https://judyhuynh.ca/climaterisk/background.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  /* Updated to scroll with the content */
+  background-attachment: scroll; 
+  font-family: Arial, sans-serif;
 }
 
 #headerImage img {
-    max-width: 100%;
-    height: auto;
+  /* Ensuring the image is responsive */
+  max-width: 100%;
+  height: auto;
 }
 
 #pageTitle {
-    text-align: center;
-    color: #000;
-    margin: 20px 0;
-}
-#content {
-    margin: 20px;
-    text-align: center;
+  text-align: center;
+  color: #000;
+  margin: 20px 0;
 }
 
-#callToAction {
-    font-size: 18px;
-    margin-bottom: 20px;
+#content {
+  margin: 20px;
+  text-align: center;
 }
 
 #definitionBox {
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    padding: 20px;
-    margin-top: 20px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    text-align: left;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  padding: 20px;
+  margin-top: 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  text-align: left;
 }
 
 button {
@@ -66,14 +62,16 @@ button {
 button:hover {
   opacity: .7;
 }
+
 button.active {
   background-image: linear-gradient(#2d8dd5 0, #6660ee 100%);
 }
+
 @media screen and (max-width: 1000px) {
   button {
-    font-size: 14px;
-    height: 55px;
-    line-height: 55px;
-    width: 150px;
+      font-size: 14px;
+      height: 55px;
+      line-height: 55px;
+      width: 150px;
   }
 }
