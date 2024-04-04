@@ -58,7 +58,6 @@ button {
   transition: all .3s;
   user-select: none;
   vertical-align: middle;
-  width: 190px;
 }
 
 button:hover {

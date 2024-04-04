@@ -1,6 +1,6 @@
 $(document).ready(function() {
   // Function to update the active button, title, and content dynamically
-  function updateContent(button, title, content, imagePath, imageAlt) {
+  function updateContent(button, title, content) {
     // Remove active class from all buttons
     $('button').removeClass('active');
     // Add active class to the clicked button
@@ -9,40 +9,32 @@ $(document).ready(function() {
     $('#definitionTitle').text(title);
     // Update the content text
     $('#definitionContent').html(content);
-    // Update the placeholder image source and alt text
-    $('#placeholderImage').attr('src', imagePath).attr('alt', imageAlt);
   }
 
-  // Event handler for the Equity in Mitigation button
-  $('#btnEquityInMitigation').click(function() {
+  // Event handler for the "What is the Hazard?" button
+  $('#btnHazard').click(function() {
     updateContent(
       $(this), 
-      'Equity in Mitigation',
-      'Discuss the importance of considering social vulnerability and how the city plans to support the most vulnerable populations during disasters.',
-      'path/to/equity_in_mitigation_image.jpg',
-      'Equity in Mitigation Image'
+      'What is the Hazard?',
+      'Description and examples of potential hazards that New York City might face, such as natural disasters, technological incidents, or human-caused events.'
     );
   });
 
-  // Event handler for the Community Resilience button
-  $('#btnCommunityResilience').click(function() {
+  // Event handler for the "What is the Risk?" button
+  $('#btnRisk').click(function() {
     updateContent(
       $(this), 
-      'Community Resilience',
-      'Highlight local initiatives and workshops aimed at educating the public on hazard mitigation and preparedness measures.',
-      'path/to/community_resilience_image.jpg',
-      'Community Resilience Image'
+      'What is the Risk?',
+      'Analysis of the likelihood and potential impact of different hazards on New York City, taking into account various vulnerability factors.'
     );
   });
 
-  // Event handler for the Infrastructure Protection button
-  $('#btnInfrastructureProtection').click(function() {
+  // Event handler for the "How to Manage the Risk?" button
+  $('#btnRiskManagement').click(function() {
     updateContent(
       $(this), 
-      'Infrastructure Protection',
-      'Outline specific structural measures and policies designed to reduce risks and ensure the continuity of essential services.',
-      'path/to/infrastructure_protection_image.jpg',
-      'Infrastructure Protection Image'
+      'How to Manage the Risk?',
+      'Strategies and measures that can be implemented to mitigate risks, including emergency preparedness, infrastructure improvements, and community education.'
     );
   });
 
