@@ -1,19 +1,38 @@
 body {
-  /* Remove the background-image line and add a neutral blue background color */
-  background-color: #e7ecef; /* This is a soft, neutral blue. Adjust the color as needed. */
+  /* Updated body styles */
+  background-color: #e7ecef; /* Neutral background color */
   font-family: Arial, sans-serif;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  /* Updated to scroll with the content */
-  background-attachment: scroll; 
-  font-family: Arial, sans-serif;
+  margin: 0;
+  padding-top: 0px; /* Updated to remove padding */
 }
 
-#headerImage img {
-  /* Ensuring the image is responsive */
-  max-width: 100%;
-  height: auto;
+/* Full-size header image styles */
+#fullSizeHeader img {
+  width: 100vw; /* Full width of the viewport */
+  height: auto; /* Updated to auto to adjust height dynamically */
+  object-fit: cover; /* Cover the entire area without stretching */
+}
+
+/* Style for larger screens */
+#fullSizeHeader img {
+  width: 100%;
+  height: auto; /* Updated to auto to adjust height dynamically */
+}
+
+/* Media query for screens smaller than 500px */
+@media screen and (max-width: 500px) {
+  #fullSizeHeader img {
+    /* Adjust the size of the image for smaller screens */
+    width: 50%;
+    height: auto;
+  }
+}
+
+/* Main content CSS */
+
+main {
+  padding: 20px; /* Adds padding inside the main element */
+  margin: 20px; /* Adds margin outside the main element */
 }
 
 #pageTitle {
@@ -24,6 +43,7 @@ body {
 
 #content {
   margin: 20px;
+  padding: 20px;
   text-align: center;
 }
 
@@ -38,7 +58,7 @@ body {
 
 button {
   background-color: initial;
-  background-image: linear-gradient(#8614f8 0, #760be0 100%);
+  background-image: linear-gradient(#2a6587 0, #82aabf 100%);
   border-radius: 20px;
   border-style: none;
   box-shadow: rgba(245, 244, 247, .25) 0 1px 1px inset;
@@ -66,7 +86,7 @@ button:hover {
 }
 
 button.active {
-  background-image: linear-gradient(#2d8dd5 0, #6660ee 100%);
+  background-image: linear-gradient(#2b3438 0, #475b64 100%);
 }
 
 @media screen and (max-width: 1000px) {
@@ -88,8 +108,20 @@ header {
   z-index: 1000;
 }
 
+/* Static navigation bar styles */
+nav {
+  background-color: #000; /* Dark background for the navigation bar */
+  color: #fff;
+  position: fixed; /* Fixed position to keep it static */
+  top: 0; /* Align to the top */
+  width: 100%; /* Full width */
+  z-index: 1000; /* Above other content */
+  padding: 20px 0; /* Increased padding to make the bar thicker */
+}
+
 nav ul {
   list-style-type: none;
+  margin: 0;
   padding: 0;
   text-align: center;
 }
@@ -102,16 +134,10 @@ nav ul li {
 nav ul li a {
   color: #fff;
   text-decoration: none;
-  padding: 5px 10px;
+  padding: 10px 15px;
 }
 
 nav ul li a:hover, nav ul li a:focus {
-  background-color: #575757;
+  background-color: #6c8694;
   border-radius: 5px;
-}
-
-.scroll-section {
-  padding: 50px 20px;
-  margin: 40px 0;
-  border-bottom: 1px solid #ccc;
 }
