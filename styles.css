@@ -5,6 +5,13 @@ body {
   padding-top: 0px;
 }
 
+/* Class 3 add mapbox */
+#map {
+  height: 400px;  /* Set a fixed height or as per your requirement */
+  width: 100%;  /* Take full width of the container */
+  margin-top: 20px;  /* Add some space at the top, adjust as needed */
+}
+
 /* Full-size header image styles */
 #fullSizeHeader img {
   width: 100vw;
@@ -166,5 +173,10 @@ nav ul li a:focus {
     /* Auto height for better text fit */
     line-height: normal;
     /* Normal line height for button text */
+  }
+  @media screen and (max-width: 768px) {
+    #map {
+      height: 300px; /* Smaller height for mobile devices */
+    }
   }
 }
